@@ -39,7 +39,7 @@ var game = new Phaser.Game(config);
 
 // criando a variavél do passáro
 var passarinho;
-var voar = true
+var voar = true; 
 
 // a função preload serve carregar um ativo no código
 function preload() {
@@ -65,51 +65,38 @@ function create() {
    
 }
 
-// a função update serve para atualizar constantemente os comandos no navegador                                  
+// A função update serve para atualizar constantemente os comandos no navegador                                  
 function update() { 
 
-    // eixo x
-
-// explicar esse bloco
-    if (passarinho.x === 100 ) {
-        passarinho.setFlip(false,false);
+    if (passarinho.x === 100 ) { // Definindo a condição do 'if (pasarinho estar na posição 100 do eixo horizontal)
+        passarinho.setFlip(false,false); // Definindo que o passarinho não irá espelhar o lado
         passarinho.ida = true;    
     }
 
-    // explicar esse bloco
-    if (passarinho.x < 700 && passarinho.ida === true) {
-        console.log("o que acontece?");
+    if (passarinho.x < 700 && passarinho.ida === true) { // Definindo a condição do 'if ' (pasarinho estar em uma posição menor que 700 no eixo horizontal e passarinho.ida ser verdadeiro)
+        console.log("Passarinho voa para direita e para cima"); // Imprimindo essa informação no console
+        // Informando as unidades de medida que o passarinho voar em cada eixo
         passarinho.x += 5
         passarinho.y -= 2
     }
 
-    // explicar esse bloco
-    if (passarinho.x === 700 ) {
-        passarinho.setFlip(true, false);
+    if (passarinho.x === 700 ) { // // Definindo a condição do 'if (pasarinho estar na posição 700 do eixo horizontal)
+        passarinho.setFlip(true, false); // Definindo que o passarinho irá espelhar no eixo horizontal
         passarinho.ida = false;
     }
 
-    // explicar esse bloco
-    if (passarinho.x > 100 && passarinho.ida === false) {
-        console.log("e oque acontece agora?");
+    if (passarinho.x > 100 && passarinho.ida === false) { // Definindo a condição do 'if ' (pasarinho estar em uma posição maior que 100 no eixo horizontal e passarinho.ida ser falso)
+        console.log("passarinho voa para esquerda e para baixo"); // Imprimindo essa informação no console
+         // Informando as unidades de medida que o passarinho voar em cada eixo
         passarinho.x -= 5
         passarinho.y += 2
     }
-
-
-
 }
  
-while ( voar = true) {
-        console.log ('passarinho voando')
+while ( voar = true) { // Definindo a condição do 'while' (variável voar ser verdadeira)
+        console.log ('passarinho voando') // Imprimindo essa informação no console
         if (passarinho.x < 700);
-        
     }
-
-
-   
-
-
 
 </script>
 
